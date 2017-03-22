@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 const {
-  A: emberArray,
+//   A: emberArray,
   Object: EmberObject,
-  get,
-  set
+//   get,
+//   set
 } = Ember;
 
 export default EmberObject.extend({
