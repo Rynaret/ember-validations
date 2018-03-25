@@ -132,8 +132,10 @@ export default Mixin.create(setValidityMixin, {
     });
 
     let errors = this.errors;
-    Object.keys(this.validations).forEach(function(property) {
-      set(errors, property, emberArray());
+    Object.keys(this.validations).forEach(function (property) {
+      property.split('.').forEach(function (splitProperty) {
+        set(errors, property, emberArray());
+      });
     });
     
     this._validate();
